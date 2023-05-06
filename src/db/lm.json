@@ -1,0 +1,109 @@
+{
+  "originals": [
+    {
+      "id": 1,
+      "name": "World Cup",
+      "price": 500,
+      "image": "/images/31bc5af5be80c65e776e0850db73bae0.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Copa America",
+      "price": 333,
+      "image": "/images/8c57f29d5f90086b45a615b100439876.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Original",
+      "price": 700,
+      "image": "/images/messi-rebecca-jenkins.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Goat",
+      "price": 333,
+      "image": "/images/lionel-messi-in-barcelona-kit-gull-g.jpg"
+    }
+  ],
+
+  "limited": [
+    {
+      "id": 1,
+      "name": "World Class",
+      "price": 350,
+      "image": "/images/lionel-messi-paul-meijering.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Skillful",
+      "price": 400,
+      "image": "/images/lionel-messi-wpap-me.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Class",
+      "price": 250,
+      "image": "/images/97b753c803a08be55c230fc7164fd434.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Soccerer",
+      "price": 777,
+      "image": "/images/lionel-messi-the-greatest-wpap-me.jpg"
+    }
+  ],
+
+  "featured": [
+    {
+      "id": 1,
+      "name": "Baller",
+      "price": 450,
+      "image": "/images/lionel-messi-footballer-watercolor-portrait-design-turnpike.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Unbelievable",
+      "price": 250,
+      "image": "/images/7ca77153fef1e193fb7a27669c08f2fa.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Solitude",
+      "price": 500,
+      "image": "/images/intensity-lionel-messi-tamir-barkan.jpg"
+    },
+    {
+      "id": 4,
+      "name": "New Era",
+      "price": 550,
+      "image": "/images/lionel-messi-92ui-gull-g.jpg"
+    }
+  ],
+
+  "latest": [
+    {
+      "id": 1,
+      "name": "Genius",
+      "price": 650,
+      "image": "/images/0097984d51306e0a2e4dbfcd48914c6c.jpg"
+    },
+    {
+      "id": 2,
+      "name": "The Best",
+      "price": 750,
+      "image": "/images/17096f4e79c9800ad6120fc052372386.jpg"
+    },
+    {
+      "id": 3,
+      "name": "A New Beginning",
+      "price": 550,
+      "image": "/images/36504664fddf20a997bd4cb983b2dbc6.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Alien",
+      "price": 450,
+      "image": "/images/a5f02d68fcc31f92093a55311c7a862d.jpg"
+    }
+  ]
+}
