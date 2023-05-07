@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function Navbar() {
   return (
-    <nav className="flex justify-between flex-wrap border-b-[1px] border-black py-3 px-4">
+    <nav className="flex justify-between flex-wrap border-b-[1px] border-black py-3 px-4 md:px-10 lg:px-14">
       <button className="flex items-center gap-2">
         <div className="flex flex-col gap-1">
           <div className="h-[1px] w-4 bg-black"></div>
@@ -8,7 +10,10 @@ export default function Navbar() {
         </div>
         <span>SHOP</span>
       </button>
-      <h3>LM10</h3>
+      <Link href="/">
+        <h3 className="md:hidden lg:hidden">LM10</h3>
+        <h3 className="hidden md:block uppercase">Lionel Andrés Messi</h3>
+      </Link>
       <button className="flex items-center gap-1">
         <span>CART</span>
         <span className="text-white bg-black rounded-full w-8 h-5 flex justify-center items-center p-2">

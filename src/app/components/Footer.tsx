@@ -32,7 +32,7 @@ const PAYMENT_LOGOS = [
 
 const Footer = () => {
   return (
-    <footer className="border-t-[1px] border-black py-5 px-4">
+    <footer className="border-t-[1px] border-black py-5 px-4 md:px-10 lg:px-14">
       <section className="mb-6 flex flex-wrap justify-between md:gap-10 md:w-full">
         <div className="flex flex-col gap-1">
           <h3 className="uppercase">Socials</h3>
@@ -97,7 +97,7 @@ const Footer = () => {
         </Marquee>
       </section>
 
-      <section className="mt-6 flex flex-col gap-4 place-items-center">
+      <section className="mt-6 flex flex-col gap-4 place-items-center md:flex-row md:justify-between">
         <h3 className="text-xs">@LM10 | {new Date().getFullYear()}</h3>
 
         <p className="uppercase text-center text-xs">

@@ -3,9 +3,9 @@ import lm from "../../db/lm.json";
 
 const Originals = () => {
   return (
-    <section className="mt-14 mb-4">
-      <h3 className="text-3xl text-center mb-4">Originals</h3>
-      <div className="flex justify-center flex-col gap-6 md:flex-row md:flex-wrap">
+    <section>
+      {/* <h3 className="text-3xl text-center uppercase mb-4">Originals</h3> */}
+      <div className="grid justify-center items-center gap-3 md:grid-cols-2 lg:grid-cols-4">
         {lm.originals.map((original) => (
           <div
             key={original.id}
@@ -15,6 +15,7 @@ const Originals = () => {
               src={original.image}
               height={200}
               width={300}
+              className="w-full h-64 object-cover"
               alt={original.name}
             />
             <div className="flex justify-between">
@@ -23,13 +24,10 @@ const Originals = () => {
             </div>
           </div>
         ))}
-        {/* <button className="uppercase border-[1px] border-black py-1 w-full">
-          Shop All
-        </button> */}
       </div>
-      <button className="uppercase border-[1px] border-black py-1 w-full mt-6">
+      {/* <button className="uppercase border-[1px] border-black py-1 w-full mt-6">
         Shop All
-      </button>
+      </button> */}
     </section>
   );
 };

@@ -3,9 +3,9 @@ import lm from "../../db/lm.json";
 
 const LimitedEdition = () => {
   return (
-    <section className="mt-24 mb-4">
-      <h3 className="text-3xl text-center mb-4 uppercase">Limited Edition</h3>
-      <div className="flex flex-col gap-6">
+    <section>
+      {/* <h3 className="text-3xl text-center mb-4 uppercase">Limited Edition</h3> */}
+      <div className="grid justify-center gap-3 md:grid-cols-2 lg:grid-cols-4">
         {lm.limited.map((edition) => (
           <div
             key={edition.id}
@@ -15,6 +15,7 @@ const LimitedEdition = () => {
               src={edition.image}
               height={200}
               width={300}
+              className="w-full h-64 object-cover"
               alt={edition.name}
             />
             <div className="flex justify-between">
@@ -23,10 +24,10 @@ const LimitedEdition = () => {
             </div>
           </div>
         ))}
-        <button className="uppercase border-[1px] border-black py-1">
-          Shop All
-        </button>
       </div>
+      {/* <button className="uppercase border-[1px] border-black py-1 w-full mt-6">
+        Shop All
+      </button> */}
     </section>
   );
 };
