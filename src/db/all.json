@@ -1,5 +1,5 @@
 {
-  "originals": [
+  "all": [
     {
       "id": 1,
       "slug": "world-cup",
@@ -27,95 +27,86 @@
       "name": "Goat",
       "price": 333,
       "image": "/images/4e72ac167620351.Y3JvcCwxMTk2LDkzNSwzMzQsNjIx.webp"
-    }
-  ],
-
-  "limited": [
+    },
     {
-      "id": 1,
+      "id": 5,
       "slug": "world-class",
       "name": "World Class",
       "price": 350,
       "image": "/images/ebce1e73940305.5c1a8f2cd55fc.webp"
     },
     {
-      "id": 2,
+      "id": 6,
       "slug": "skillful",
       "name": "Skillful",
       "price": 400,
       "image": "/images/af92d6159152353.6398df9b81db3.webp"
     },
     {
-      "id": 3,
+      "id": 7,
       "slug": "class",
       "name": "Class",
       "price": 250,
       "image": "/images/5b13f8159414699.Y3JvcCw4MDgsNjMyLDAsMA.webp"
     },
     {
-      "id": 4,
+      "id": 8,
       "slug": "soccerer",
       "name": "Soccerer",
       "price": 777,
       "image": "/images/eb62a3169368255.Y3JvcCwxNTAwLDExNzMsMCw0NjQ.webp"
-    }
-  ],
-
-  "featured": [
+    },
     {
-      "id": 1,
+      "id": 9,
       "slug": "baller",
       "name": "Baller",
       "price": 450,
       "image": "/images/48e100160199357.Y3JvcCwzMTM0LDI0NTIsMTg2LDA.webp"
     },
     {
-      "id": 2,
+      "id": 10,
       "slug": "unbelievable",
       "name": "Unbelievable",
       "price": 250,
       "image": "/images/b88a99163774347.Y3JvcCwxOTgzLDE1NTEsMCwyNzk.webp"
     },
     {
-      "id": 3,
+      "id": 11,
       "slug": "idan",
       "name": "Idan",
       "price": 500,
       "image": "/images/e4e7e766347343.Y3JvcCw0MzksMzQzLDI4OCw2NA.webp"
     },
     {
-      "id": 4,
+      "id": 12,
       "slug": "new-era",
       "name": "New Era",
       "price": 550,
       "image": "/images/4cdfab116614271.Y3JvcCwxMTY5LDkxNCwxMDksNjMw.webp"
-    }
-  ],
-
-  "latest": [
+    },
     {
-      "id": 1,
+      "id": 13,
       "slug": "genius",
       "name": "Genius",
       "price": 650,
       "image": "/images/2bbb3a95114393.Y3JvcCwxNDAwLDEwOTUsMCwzMQ.webp"
     },
     {
-      "id": 2,
+      "id": 14,
       "slug": "the-best",
       "name": "The Best",
       "price": 750,
       "image": "/images/73b09532789969.Y3JvcCwyNzczLDIxNjksMzUzLDQ4Mw.webp"
     },
     {
-      "id": 3,
+      "id": 15,
       "slug": "a-new-beginning",
       "name": "A New Beginning",
       "price": 550,
       "image": "/images/8d92ce159658003.Y3JvcCwxNDAwLDEwOTUsMCwyMTg.webp"
     },
     {
-      "id": 4,
+      "id": 16,
       "slug": "alien",
       "name": "Alien",
       "price": 450,

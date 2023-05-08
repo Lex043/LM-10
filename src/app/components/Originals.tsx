@@ -1,13 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import lm from "../../db/lm.json";
 
 const Originals = () => {
   return (
     <section>
-      {/* <h3 className="text-3xl text-center uppercase mb-4">Originals</h3> */}
-      <div className="grid justify-center items-center gap-3 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid w-full items-center gap-3 md:grid-cols-2 lg:grid-cols-4">
         {lm.originals.map((original) => (
-          <div
+          <Link
+            href={`/shop/${original.slug}`}
             key={original.id}
             className="border-[1px] border-black p-2 flex flex-col gap-2"
           >
@@ -22,12 +23,9 @@ const Originals = () => {
               <span className="uppercase">{original.name}</span>
               <span>{original.price}USD</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-      {/* <button className="uppercase border-[1px] border-black py-1 w-full mt-6">
-        Shop All
-      </button> */}
     </section>
   );
 };

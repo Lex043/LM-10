@@ -1,6 +1,6 @@
 const MailingList = () => {
   return (
-    <section className="my-6">
+    <section className="my-16">
       <div className="border-[1px] border-black p-4 md:p-12">
         <h1 className="uppercase text-3xl md:text-4xl font-semibold text-center">
           Join My Mailing List For Discounts And Latest Works

@@ -5,6 +5,7 @@ import LimitedEdition from "./components/LimitedEdition";
 import Featured from "./components/Featured";
 import Latest from "./components/Latest";
 import MailingList from "./components/MailingList";
+import Disclaimer from "./components/Disclaimer";
 
 export default function Home() {
   return (
@@ -60,6 +61,7 @@ export default function Home() {
         </Link>
       </div>
       <MailingList />
+      <Disclaimer />
     </section>
   );
 }

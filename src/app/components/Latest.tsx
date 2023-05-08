@@ -1,13 +1,14 @@
 import Image from "next/image";
+import Link from "next/link";
 import lm from "../../db/lm.json";
 
 const Latest = () => {
   return (
     <section>
-      {/* <h3 className="text-3xl text-center mb-4 uppercase">Latest</h3> */}
       <div className="grid justify-center w-full gap-3 md:grid-cols-2 lg:grid-cols-4">
         {lm.latest.map((latest) => (
-          <div
+          <Link
+            href={`/shop/${latest.slug}`}
             key={latest.id}
             className="border-[1px] border-black p-2 flex flex-col justify-between"
           >
@@ -23,12 +24,9 @@ const Latest = () => {
               <span className="uppercase">{latest.name}</span>
               <span>{latest.price}USD</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-      {/* <button className="uppercase border-[1px] border-black py-1 w-full mt-6">
-        Shop All
-      </button> */}
     </section>
   );
 };
