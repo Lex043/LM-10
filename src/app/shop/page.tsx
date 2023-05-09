@@ -5,6 +5,10 @@ import Latest from "../components/Latest";
 import MailingList from "../components/MailingList";
 import LinkModal from "../components/LinkModal";
 
+export const metadata = {
+  title: "SHOP - LM10",
+};
+
 const page = () => {
   return (
     <section className="px-4 md:px-10 mt-6 lg:px-14">
