@@ -23,7 +23,8 @@ const items = [
     name: "Original",
     price: 700,
     image: "/images/2c4fbe160815683.Y3JvcCwxOTIwLDE1MDEsMCwzMTg.webp",
-    words: "helo",
+    words:
+      "A forward or attacking midfielder, Messi is blessed with outstanding ball control and pace and he's one of the finest players the game has seen.",
   },
   {
     id: 4,
@@ -31,7 +32,8 @@ const items = [
     name: "Goat",
     price: 333,
     image: "/images/4e72ac167620351.Y3JvcCwxMTk2LDkzNSwzMzQsNjIx.webp",
-    words: "helo",
+    words:
+      "Lionel Messi—probably the best player in the world today. He is one of the finest and most exciting footballing talents in the world. He had this never ending comparison with the former Manchester United Winger Cristiano Ronaldo but he kind of shrugged off it by helping his team defeat Manchester United convincingly in the UEFA Champions League finals at Rome 2009.",
   },
   {
     id: 5,
@@ -39,7 +41,8 @@ const items = [
     name: "World Class",
     price: 350,
     image: "/images/ebce1e73940305.5c1a8f2cd55fc.webp",
-    words: "helo",
+    words:
+      "He is the best player I have ever seen. The best thing about him is not what he does, but how simple he makes everything look. He is not just the best player because he can dribble past three or four players, it is because he does it better than anyone in the world.",
   },
   {
     id: 6,
@@ -47,7 +50,8 @@ const items = [
     name: "Skillful",
     price: 400,
     image: "/images/af92d6159152353.6398df9b81db3.webp",
-    words: "helo",
+    words:
+      "Lionel Messi is one of the best dribblers of all time. The unique thing about Messi as opposed to the other players on this list is that he is not one to do flashy tricks. The record seven-time Ballon d'Or winner uses his incredible close control, drop of the shoulder and hip swivels to get the better of his opponents.",
   },
   {
     id: 7,
@@ -55,15 +59,17 @@ const items = [
     name: "Class",
     price: 250,
     image: "/images/5b13f8159414699.Y3JvcCw4MDgsNjMyLDAsMA.webp",
-    words: "helo",
+    words:
+      "Messi rarely does stepovers and La Croqueta, a move popularized by his former teammate and legendary midfielder Andres Iniesta, is one of his go-to moves. He simply shifts the ball from one foot to the other to evade a challenge before heading past the on-rushing defender with his burst of pace.",
   },
   {
     id: 8,
-    slug: "soccerer",
-    name: "Soccerer",
+    slug: "sorcerer",
+    name: "Sorcerer",
     price: 777,
     image: "/images/eb62a3169368255.Y3JvcCwxNTAwLDExNzMsMCw0NjQ.webp",
-    words: "helo",
+    words:
+      "Lionel Messi has earned the title of a magician. For what he produces on the football pitch. Zig zag dribbles, cutting edge passes that no one else sees, and astonishing goals.",
   },
   {
     id: 9,
@@ -71,7 +77,8 @@ const items = [
     name: "Baller",
     price: 450,
     image: "/images/48e100160199357.Y3JvcCwzMTM0LDI0NTIsMTg2LDA.webp",
-    words: "helo",
+    words:
+      "At 22, Messi got his first FIFA World Player of the Year award. After that, he made efforts to keep that award in his possession by winning the award for the next 3 years.",
   },
   {
     id: 10,
@@ -79,7 +86,8 @@ const items = [
     name: "Unbelievable",
     price: 250,
     image: "/images/b88a99163774347.Y3JvcCwxOTgzLDE1NTEsMCwyNzk.webp",
-    words: "helo",
+    words:
+      "He was diagnosed with a growth hormone deficiency as a child, which required expensive treatment and put a strain on his family's finances. In 2021, he won his first major international trophy, guiding Argentina to a Copa America triumph. He helped his country lift their third World Cup title in Qatar a year later.",
   },
   {
     id: 11,
@@ -87,7 +95,8 @@ const items = [
     name: "Idan",
     price: 500,
     image: "/images/e4e7e766347343.Y3JvcCw0MzksMzQzLDI4OCw2NA.webp",
-    words: "helo",
+    words:
+      "At the age of 17, he made his league debut against RCD Espanyol and became the third youngest person ever to play on Barcelona. At that time he was also the youngest player to ever score for Barcelona.",
   },
   {
     id: 12,
@@ -95,7 +104,8 @@ const items = [
     name: "New Era",
     price: 550,
     image: "/images/4cdfab116614271.Y3JvcCwxMTY5LDkxNCwxMDksNjMw.webp",
-    words: "helo",
+    words:
+      "Lionel Messi has finally signed his eagerly anticipated Paris Saint-Germain (PSG) contract to complete the move that confirms the end of a career-long association with Barcelona and sends PSG into a new era.",
   },
   {
     id: 13,
@@ -103,7 +113,8 @@ const items = [
     name: "Genius",
     price: 650,
     image: "/images/2bbb3a95114393.Y3JvcCwxNDAwLDEwOTUsMCwzMQ.webp",
-    words: "helo",
+    words:
+      "According to sources and the Guinness website, Lionel Messi possesses as many as 60 Guinness World records to his name. Argentine superstar Lionel Messi is arguably the greatest footballer of his generation and one of the best players of all time",
   },
   {
     id: 14,
@@ -111,7 +122,8 @@ const items = [
     name: "The Best",
     price: 750,
     image: "/images/73b09532789969.Y3JvcCwyNzczLDIxNjksMzUzLDQ4Mw.webp",
-    words: "helo",
+    words:
+      "Argentinian footballer Lionel Messi, widely regarded as one of the greatest players of all time, has received seven Ballon d'Or awards, the most for any football player, as well as the 2009 FIFA World Player of the Year, and the 2019 and 2022 The Best FIFA Men's Player",
   },
   {
     id: 15,
@@ -119,7 +131,8 @@ const items = [
     name: "A New Beginning",
     price: 550,
     image: "/images/8d92ce159658003.Y3JvcCwxNDAwLDEwOTUsMCwyMTg.webp",
-    words: "helo",
+    words:
+      "The defining image of this World Cup was just about its last one. There was a kiss for the trophy. Lionel Messi finally became acquainted with the World Cup. On a night high on drama and higher on emotion, it had the perfect ending for the greatest of them all",
   },
   {
     id: 16,
@@ -127,7 +140,8 @@ const items = [
     name: "Alien",
     price: 450,
     image: "/images/8107af146610383.62b34b3634853.webp",
-    words: "helo",
+    words:
+      "When you think he is going to lose it, he comes away with it. When you think he doesn’t see you, he leaves you 1vs1 against the keeper.",
   },
 ];
 

@@ -8,7 +8,7 @@ const Disclaimer = () => {
         <p className="text-center">
           This is not the real website of Lionel Messi. This is a demo project
           for learning purpose only. The real website can be found at{" "}
-          <a href="https://messi.com" className="uppercase">
+          <a href="https://messi.com" className="uppercase font-semibold">
             messi.com
           </a>
         </p>
