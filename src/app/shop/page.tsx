@@ -1,9 +1,11 @@
+"use client";
+
 import Originals from "../components/Originals";
 import LimitedEdition from "../components/LimitedEdition";
 import Featured from "../components/Featured";
 import Latest from "../components/Latest";
 import MailingList from "../components/MailingList";
-import LinkModal from "../components/LinkModal";
+import { Tab } from "@headlessui/react";
 
 export const metadata = {
   title: "SHOP - LM10",
@@ -14,11 +16,77 @@ const page = () => {
     <section className="px-4 md:px-10 mt-6 lg:px-14">
       <h1 className="text-3xl uppercase text-center mb-4">Shop</h1>
       <div className="flex flex-col flex-wrap w-full md:flex-row gap-4 mt-8">
-        <LinkModal />
-        <Originals />
-        <LimitedEdition />
-        <Featured />
-        <Latest />
+        <Tab.Group>
+          <Tab.List className="flex flex-col border-[1px] border-black p-3">
+            <Tab
+              className={({ selected }) =>
+                `border-none outline-none uppercase text-start ${
+                  selected && "font-semibold underline"
+                }`
+              }
+            >
+              All
+            </Tab>
+            <Tab
+              className={({ selected }) =>
+                `border-none outline-none uppercase text-start ${
+                  selected && "font-semibold underline"
+                }`
+              }
+            >
+              Originals
+            </Tab>
+            <Tab
+              className={({ selected }) =>
+                `border-none outline-none uppercase text-start ${
+                  selected && "font-semibold underline"
+                }`
+              }
+            >
+              Limited Editions
+            </Tab>
+            <Tab
+              className={({ selected }) =>
+                `border-none outline-none uppercase text-start ${
+                  selected && "font-semibold underline"
+                }`
+              }
+            >
+              Featured
+            </Tab>
+            <Tab
+              className={({ selected }) =>
+                `border-none outline-none uppercase text-start ${
+                  selected && "font-semibold underline"
+                }`
+              }
+            >
+              Latest
+            </Tab>
+          </Tab.List>
+          <Tab.Panels>
+            <Tab.Panel className="flex flex-col gap-3">
+              <Originals />
+              <LimitedEdition />
+              <Featured />
+              <Latest />
+            </Tab.Panel>
+            <Tab.Panel>
+              {" "}
+              <Originals />
+            </Tab.Panel>
+            <Tab.Panel>
+              {" "}
+              <LimitedEdition />
+            </Tab.Panel>
+            <Tab.Panel>
+              <Featured />
+            </Tab.Panel>
+            <Tab.Panel>
+              <Latest />
+            </Tab.Panel>
+          </Tab.Panels>
+        </Tab.Group>
         <MailingList />
       </div>
     </section>
