@@ -1,6 +1,19 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Navbar() {
+  const [isOpen, setOpen] = useState(false);
+
+  const closeMenu = () => {
+    setOpen(false);
+  };
+
+  const openMenu = () => {
+    setOpen(true);
+  };
+
   return (
     <nav className="flex justify-between flex-wrap border-b-[1px] border-black py-3 px-4 md:px-10 lg:px-14">
       <button className="flex items-center gap-2">
@@ -15,7 +28,7 @@ export default function Navbar() {
         <h3 className="hidden md:block uppercase">Lionel Andrés Messi</h3>
       </Link>
       <button className="flex items-center gap-1">
-        <span>CART</span>
+        <span>{isOpen ? "CLOSE" : "CART"}</span>
         <span className="text-white bg-black rounded-full w-8 h-5 flex justify-center items-center p-2">
           0
         </span>

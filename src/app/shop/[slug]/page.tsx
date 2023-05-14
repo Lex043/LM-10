@@ -33,16 +33,18 @@ export default async function All({ params }: Props) {
             <span className="text-2xl font-serif">${items.price}</span>
           </div>
           <div className="flex flex-col gap-4">
-            <div className="flex h-10">
-              <button className="border-[1px] border-black w-full">-</button>
-              <span className="border-t-[1px] border-b-[1px] border-black w-full flex items-center justify-center">
-                1
-              </span>
-              <button className="border-[1px] border-black w-full">+</button>
+            <div className="flex gap-4 items-center flex-col md:flex-row">
+              <div className="flex w-full h-10">
+                <button className="border-[1px] border-black w-full">-</button>
+                <span className="border-t-[1px] border-b-[1px] border-black w-full flex items-center justify-center">
+                  1
+                </span>
+                <button className="border-[1px] border-black w-full">+</button>
+              </div>
+              <button className="uppercase text-white bg-black w-full py-2 px-2">
+                Add To Cart
+              </button>
             </div>
-            <button className="uppercase text-white bg-black w-full py-3 px-2">
-              Add To Cart
-            </button>
             <p className="text-sm">{items.words}</p>
           </div>
         </section>

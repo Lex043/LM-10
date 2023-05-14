@@ -101,11 +101,13 @@ const Footer = () => {
         <h3 className="text-xs">@LM10 | {new Date().getFullYear()}</h3>
 
         <p className="uppercase text-center text-xs">
-          <span>Design & dev: Alex. </span>
+          <span>Inspired by: yinkakun dev: Alex. </span>
           <span>
             {" "}
             This Project is open source. You can checkout the repo{" "}
-            <a href="/">here</a>
+            <a href="https://github.com/Lex043/LM-10" className="font-bold">
+              here
+            </a>
           </span>
         </p>
       </section>
