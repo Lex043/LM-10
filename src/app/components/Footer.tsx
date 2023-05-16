@@ -101,7 +101,16 @@ const Footer = () => {
         <h3 className="text-xs">@LM10 | {new Date().getFullYear()}</h3>
 
         <p className="uppercase text-center text-xs">
-          <span>Inspired by: yinkakun dev: Alex. </span>
+          <span>
+            Inspired by:{" "}
+            <a href="https://leah-gardner.vercel.app/" className="font-bold">
+              yinkakun's leah-gardner &
+            </a>{" "}
+            <a href="https://cr7-swiss.vercel.app/" className="font-bold">
+              CR7's site by swiss
+            </a>{" "}
+            dev: Alex.{" "}
+          </span>
           <span>
             {" "}
             This Project is open source. You can checkout the repo{" "}
