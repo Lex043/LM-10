@@ -107,7 +107,7 @@ const Footer = () => {
               yinkakun's leah-gardner &
             </a>{" "}
             <a href="https://cr7-swiss.vercel.app/" className="font-bold">
-              CR7's site by swiss
+              CR7's site by swiss.
             </a>{" "}
             dev: Alex.{" "}
           </span>
