@@ -12,7 +12,7 @@ export default async function All({ params }: Props) {
   const [items] = await getData(params.slug);
 
   return (
-    <section className="px-4 md:px-20 mx-auto my-6 lg:px-28">
+    <section className="px-4 mt-20 md:px-20 mx-auto my-6 lg:px-28">
       <div className="grid w-full items-center gap-4 md:grid-cols-2 md:justify-between">
         <div
           key={items.id}
