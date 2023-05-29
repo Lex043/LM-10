@@ -6,13 +6,12 @@ import Featured from "./components/Featured";
 import Latest from "./components/Latest";
 import MailingList from "./components/MailingList";
 import Disclaimer from "./components/Disclaimer";
-import Navlinks from "./components/Navlinks";
 
 export default function Home() {
   return (
-    <section className="px-4 md:px-10 mt-20 lg:px-14">
+    <section className="px-4 md:px-10 lg:px-14 mt-20 lg:mt-48">
       <header className="text-center flex flex-col gap-4 place-items-center">
-        <h1 className="uppercase text-6xl md:text-9xl flex flex-col font-extrabold">
+        <h1 className="uppercase text-6xl md:text-9xl lg:text-[10rem] flex flex-col font-extrabold">
           <span>Leo</span>
           <span>Messi</span>
         </h1>
@@ -63,7 +62,6 @@ export default function Home() {
       </div>
       <MailingList />
       <Disclaimer />
-      <Navlinks />
     </section>
   );
 }
