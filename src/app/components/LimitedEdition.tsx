@@ -17,7 +17,6 @@ interface Limited {
 
 const LimitedEdition = () => {
   const [limitededition, setLimitededition] = useState<any>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   const fetchData = async () => {
@@ -33,8 +32,6 @@ const LimitedEdition = () => {
       if (error instanceof Error) {
         setError(error.message || "Error loading data");
       }
-    } finally {
-      setIsLoading(false);
     }
   };
 
@@ -44,7 +41,6 @@ const LimitedEdition = () => {
 
   return (
     <div className="grid w-full items-center gap-3 md:grid-cols-2 lg:grid-cols-4">
-      {isLoading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {limitededition.map(
         (limited: Limited) =>

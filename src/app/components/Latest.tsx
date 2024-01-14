@@ -18,7 +18,6 @@ interface Latest {
 
 const Latest = () => {
   const [latest, setLatest] = useState<any>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   const fetchData = async () => {
@@ -34,8 +33,6 @@ const Latest = () => {
       if (error instanceof Error) {
         setError(error.message || "Error loading data");
       }
-    } finally {
-      setIsLoading(false);
     }
   };
 
@@ -45,7 +42,6 @@ const Latest = () => {
 
   return (
     <div className="grid w-full items-center gap-3 md:grid-cols-2 lg:grid-cols-4">
-      {isLoading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {latest.map(
         (data: Latest) =>
