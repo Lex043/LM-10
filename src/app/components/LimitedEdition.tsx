@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import ImageComponent from "./ImageComponent";
 import { useState, useEffect } from "react";
 import { db } from "@/firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
@@ -50,13 +50,7 @@ const LimitedEdition = () => {
               href={`/shop/${limited.slug}`}
               className="border-[1px] border-black p-2 flex flex-col gap-2"
             >
-              <Image
-                src={limited.imageUrl}
-                height={200}
-                width={300}
-                className="w-full h-64 object-cover"
-                alt={limited.name}
-              />
+              <ImageComponent data={limited} />
               <div className="flex justify-between">
                 <span className="uppercase">{limited.name}</span>
                 <span>{limited.price}USD</span>

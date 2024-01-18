@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import ImageComponent from "./ImageComponent";
 import { db } from "@/firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
 
@@ -50,13 +50,7 @@ const Originals = () => {
               href={`/shop/${original.slug}`}
               className="border-[1px] border-black p-2 flex flex-col gap-2"
             >
-              <Image
-                src={original.imageUrl}
-                height={200}
-                width={300}
-                className="w-full h-64 object-cover"
-                alt={original.name}
-              />
+              <ImageComponent data={original} />
               <div className="flex justify-between">
                 <span className="uppercase">{original.name}</span>
                 <span>{original.price}USD</span>

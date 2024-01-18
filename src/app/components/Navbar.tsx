@@ -23,7 +23,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed backdrop-blur-xl bg-white/30 w-full flex justify-between flex-wrap border-b-[1px] border-black py-3 px-4 md:px-10 lg:px-14">
+    <nav className="fixed backdrop-blur-xl bg-white/30 w-full flex justify-between flex-wrap border-b-[1px] border-black py-3 px-4 md:px-10 lg:px-14 z-50">
       <button
         onClick={() => setShopOpen(!isShopOpen)}
         className="flex items-center gap-2"
