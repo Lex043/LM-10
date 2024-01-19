@@ -18,11 +18,9 @@ body::-webkit-scrollbar {
 .blur {
   filter: blur(5px);
   transition: filter 0.3s ease-in;
-  object-fit: cover;
 }
 
 .remove-blur {
   filter: blur(0px);
   transition: filter 0.3s ease-in;
-  object-fit: cover;
 }
