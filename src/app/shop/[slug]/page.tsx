@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ImageComponent from "@/app/components/ImageComponent";
 import type { Metadata } from "next";
 import { db } from "@/firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
