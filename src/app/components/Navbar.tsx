@@ -2,11 +2,6 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Tab } from "@headlessui/react";
-import Originals from "./Originals";
-import LimitedEdition from "../components/LimitedEdition";
-import Featured from "../components/Featured";
-import Latest from "../components/Latest";
 // import useStore from "../store/store";
 
 export default function Navbar() {
@@ -58,26 +53,6 @@ export default function Navbar() {
                   Latest
                 </Link>
               </div>
-              <Tab.Group>
-                <Tab.List>
-                  <Tab>Originals</Tab>
-                  <Tab>Limited Editions</Tab>
-                  <Tab> Featured</Tab>
-                  <Tab>Latest</Tab>
-                </Tab.List>
-                <Tab.Panels>
-                  <Tab.Panel>{/* <Originals /> */}</Tab.Panel>
-                  <Tab.Panel>
-                    <LimitedEdition />
-                  </Tab.Panel>
-                  <Tab.Panel>
-                    <Featured />
-                  </Tab.Panel>
-                  <Tab.Panel>
-                    <Latest />
-                  </Tab.Panel>
-                </Tab.Panels>
-              </Tab.Group>
             </div>
           </div>
         </section>

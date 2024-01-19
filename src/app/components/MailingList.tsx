@@ -5,7 +5,7 @@ const MailingList = () => {
         <h1 className="uppercase text-3xl md:text-4xl font-semibold text-center">
           Join My Mailing List For Discounts And Latest Works
         </h1>
-        <div className="flex mt-4">
+        <div className="flex mt-4 max-w-sm mx-auto">
           <input
             type="email"
             placeholder="Your Email"

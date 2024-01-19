@@ -1,8 +1,8 @@
 const Disclaimer = () => {
   return (
     <section className="my-16">
-      <div className="border-[1px] border-black p-4 md:p-8 max-w-xl mx-auto flex flex-col gap-4 place-items-center">
-        <button className="text-white bg-black uppercase py-1 px-2">
+      <div className="border-[1px] border-red-600 p-4 md:p-8 max-w-xl mx-auto flex flex-col gap-4 place-items-center">
+        <button className="text-white bg-red-600 uppercase py-1 px-2">
           Disclaimer
         </button>
         <p className="text-center">

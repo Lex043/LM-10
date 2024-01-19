@@ -18,15 +18,6 @@ const Shop = () => {
               }`
             }
           >
-            All
-          </Tab>
-          <Tab
-            className={({ selected }) =>
-              `border-none outline-none uppercase text-start ${
-                selected && "font-semibold underline"
-              }`
-            }
-          >
             Originals
           </Tab>
           <Tab
@@ -58,18 +49,10 @@ const Shop = () => {
           </Tab>
         </Tab.List>
         <Tab.Panels>
-          <Tab.Panel className="flex flex-col gap-3">
-            <Originals />
-            <LimitedEdition />
-            <Featured />
-            <Latest />
-          </Tab.Panel>
           <Tab.Panel>
-            {" "}
             <Originals />
           </Tab.Panel>
           <Tab.Panel>
-            {" "}
             <LimitedEdition />
           </Tab.Panel>
           <Tab.Panel>

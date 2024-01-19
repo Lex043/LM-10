@@ -13,7 +13,7 @@ const ImageComponent = ({ data }: any) => {
         onLoad={() => setImageLoading(false)}
         className={`${
           isImageLoading ? "blur" : "remove-blur"
-        } w-full h-64 object-cover`}
+        } w-full h-72 object-cover`}
       />
     </div>
   );
