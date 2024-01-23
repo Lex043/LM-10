@@ -37,19 +37,19 @@ export default function Navbar() {
       {isShopOpen && (
         <section className="fixed mt-[37px] min-h-screen backdrop-blur-xl bg-white/30 right-0 w-full ">
           <div className="relative bg-white h-full flex grid-cols-2 items-center justify-between">
-            <div className="uppercase w-full px-4 md:px-10 lg:px-14 py-10 border-b-[1px] border-black">
+            <div className="uppercase w-full px-4 md:px-10 lg:px-14 py-4 border-b-[1px] border-black">
               <h1>Collections</h1>
               <div className="text-sm opacity-80 flex flex-col gap-2 mt-2">
-                <Link onClick={handleClick} href="/shop">
+                <Link onClick={handleClick} href="/shop/originals">
                   Originals
                 </Link>
-                <Link onClick={handleClick} href="/shop">
+                <Link onClick={handleClick} href="/shop/limitedEdition">
                   Limited Editions
                 </Link>
-                <Link onClick={handleClick} href="/shop">
+                <Link onClick={handleClick} href="/shop/featured">
                   Featured
                 </Link>
-                <Link onClick={handleClick} href="/shop">
+                <Link onClick={handleClick} href="/shop/latest">
                   Latest
                 </Link>
               </div>

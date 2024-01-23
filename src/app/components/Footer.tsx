@@ -1,4 +1,3 @@
-import Marquee from "react-fast-marquee";
 import Image from "next/image";
 
 import VisaLogo from "../../../public/images/visa.svg";
@@ -75,26 +74,24 @@ const Footer = () => {
           </ul>
         </div>
 
-        <Marquee gradient={false} speed={50} pauseOnHover className="max-w-sm">
-          <div className="flex items-center gap-6 mt-4">
-            {" "}
-            {PAYMENT_LOGOS.map((logo, name) => {
-              return (
-                <div
-                  className="w-12 grayscale duration-100 ease-linear hover:grayscale-0"
-                  key={name}
-                >
-                  <Image
-                    src={logo.logo}
-                    height={40}
-                    width={40}
-                    alt={logo.name}
-                  />
-                </div>
-              );
-            })}
-          </div>
-        </Marquee>
+        <div className="flex items-center gap-3 mt-4">
+          {PAYMENT_LOGOS.map((logo, name) => {
+            return (
+              <div
+                className="w-12 grayscale duration-100 ease-linear hover:grayscale-0"
+                key={name}
+              >
+                <Image
+                  src={logo.logo}
+                  height={40}
+                  width={40}
+                  alt={logo.name}
+                  className="cursor-pointer"
+                />
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       <section className="mt-6 flex flex-col gap-4 place-items-center md:flex-row md:justify-between">
@@ -112,8 +109,7 @@ const Footer = () => {
             dev: Alex.{" "}
           </span>
           <span>
-            {" "}
-            This Project is open source. You can checkout the repo{" "}
+            You can checkout the repo{" "}
             <a href="https://github.com/Lex043/LM-10" className="font-bold">
               here
             </a>
