@@ -1,9 +1,10 @@
 "use client";
 
-import Originals from "@/app/components/Originals";
-import Latest from "@/app/components/Latest";
+import dynamic from "next/dynamic";
+const Originals = dynamic(() => import("../../components/Originals"));
+const Latest = dynamic(() => import("../../components/Latest"));
 import Featured from "@/app/components/Featured";
-import LimitedEdition from "@/app/components/LimitedEdition";
+const LimitedEdition = dynamic(() => import("../../components/LimitedEdition"));
 import { Tab } from "@headlessui/react";
 
 const page = () => {
