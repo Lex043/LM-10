@@ -3,13 +3,13 @@
 import Link from "next/link";
 import ImageComponent from "./ImageComponent";
 import { FirebaseData } from "@/types";
-import UseData from "../utils/UseData";
+import useData from "../utils/UseData";
+import React from "react";
 
-const LimitedEdition = () => {
-    const { error, data: limitededition } = UseData();
+const LimitedEdition: React.FC = () => {
+    const { error, data: limitededition } = useData();
 
-    if (error) return "An error has occurred: " + error.message;
-
+    if (error) return <div>An error has occurred: {error.message}</div>;
     return (
         <div className="grid w-full items-center gap-4 md:grid-cols-2 lg:grid-cols-4">
             {limitededition?.map(
