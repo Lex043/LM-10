@@ -3,13 +3,15 @@
 import Link from "next/link";
 import Cart from "./Cart";
 import { useState, useEffect, useRef } from "react";
-// import useStore from "../store/store";
+import useStore from "../store/store";
 
 export default function Navbar() {
     const [isShopOpen, setShopOpen] = useState<boolean>(false);
     const [isCartOpen, setCartOpen] = useState<boolean>(false);
 
-    // const cartLength = useStore((state) => state.cartLength);
+    const cartItemsLength = useStore(
+        (state: { getCartItemsLength: () => any }) => state.getCartItemsLength()
+    );
 
     let menuRef = useRef<HTMLDivElement>(null);
     let shopButtonRef = useRef<HTMLInputElement | null>(null);
@@ -121,7 +123,7 @@ export default function Navbar() {
             >
                 <span>{isCartOpen ? "CLOSE" : "CART"}</span>
                 <span className="text-white bg-black rounded-full w-8 h-5 flex justify-center items-center p-2">
-                    0
+                    {cartItemsLength}
                 </span>
             </div>
             {isCartOpen && (
