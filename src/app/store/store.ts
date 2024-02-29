@@ -3,7 +3,6 @@ import { State, FirebaseData } from "@/types";
 
 const useStore = create<State>((set) => ({
     cartItems: [],
-    cartQuantity: 1,
 
     addItemToCart: (item: FirebaseData) => {
         set((state) => {
@@ -22,17 +21,17 @@ const useStore = create<State>((set) => ({
             } else {
                 return {
                     ...state,
-                    cartItems: [...state.cartItems, { ...item, quantity: 1 }],
+                    cartItems: [...state.cartItems, { ...item }],
                 };
             }
         });
     },
 
-    removeItemFromCart: (item: FirebaseData) => {
+    removeItemFromCart: (item: string) => {
         set((state) => ({
             ...state,
             cartItems: state.cartItems.filter(
-                (cartItem) => cartItem.id !== item.id
+                (cartItem) => cartItem.slug !== item
             ),
         }));
     },
@@ -42,16 +41,48 @@ const useStore = create<State>((set) => ({
         return state.cartItems.length;
     },
 
-    increaseCartItems: () =>
-        set((state) => ({
-            ...state,
-            cartQuantity: state.cartQuantity + 1,
-        })),
+    clearCart: () => {
+        set((state) => {
+            return {
+                ...state,
+                cartItems: [],
+            };
+        });
+    },
 
-    decreaseCartItems: () =>
+    calculateSubTotal: () => {
+        const state: State = useStore.getState();
+        const totalPrice = state.cartItems.reduce((total, cartItem) => {
+            return total + cartItem.price * cartItem.quantity;
+        }, 0);
+
+        return totalPrice;
+    },
+
+    increaseCartItems: (itemId) => {
         set((state) => ({
             ...state,
-            cartQuantity: state.cartQuantity <= 1 ? 1 : state.cartQuantity - 1,
+            cartItems: state.cartItems.map((cartItem) =>
+                cartItem.slug === itemId
+                    ? { ...cartItem, quantity: cartItem.quantity + 1 }
+                    : cartItem
+            ),
+        }));
+    },
+    decreaseCartItems: (itemId) =>
+        set((state) => ({
+            ...state,
+            cartItems: state.cartItems.map((cartItem) =>
+                cartItem.slug === itemId
+                    ? {
+                          ...cartItem,
+                          quantity:
+                              cartItem.quantity <= 1
+                                  ? 1
+                                  : cartItem.quantity - 1,
+                      }
+                    : cartItem
+            ),
         })),
 }));
 

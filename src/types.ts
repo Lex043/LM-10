@@ -10,10 +10,10 @@ export type FirebaseData = {
 
 export type State = {
     cartItems: FirebaseData[];
-    cartQuantity: number;
     addItemToCart: (item: FirebaseData) => void;
-    removeItemFromCart: (item: FirebaseData) => void;
+    removeItemFromCart: (item: string) => void;
     getCartItemsLength: () => number;
-    increaseCartItems: () => void;
-    decreaseCartItems: () => void;
+    clearCart: () => void;
+    increaseCartItems: (itemId: string) => void;
+    decreaseCartItems: (itemId: string) => void;
 };

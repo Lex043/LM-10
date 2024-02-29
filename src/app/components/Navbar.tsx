@@ -129,7 +129,7 @@ export default function Navbar() {
             {isCartOpen && (
                 <section
                     className="fixed mt-[37px] border-l-[1px] backdrop-blur-lg opacity-100  border-black
-                 right-0 w-full md:max-w-lg lg:max-w-2xl"
+                 right-0 w-full md:max-w-[45%] overflow-scroll"
                 >
                     <Cart setCartOpen={setCartOpen} />
                 </section>

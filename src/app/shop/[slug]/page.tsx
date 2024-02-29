@@ -2,7 +2,7 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { db } from "@/firebaseConfig";
 import { collection, getDocs } from "firebase/firestore";
-import CartItems from "@/app/components/AddToCart";
+import AddToCart from "@/app/components/AddToCart";
 
 interface Props {
     params: {
@@ -38,17 +38,17 @@ export default async function Page({ params }: Props) {
     }
 
     return (
-        <section className="px-4 mt-20 md:px-20 mx-auto my-6 lg:px-28">
+        <section className="px-4 mt-20 md:px-10 mx-auto my-6 lg:px-32">
             <div className="grid w-full items-center gap-4 md:grid-cols-2 md:justify-between">
                 <div
                     key={item.id}
-                    className="border-[1px] border-black p-2 flex flex-col gap-2 md:max-w-[80%]"
+                    className="border-[1px] border-black p-2 flex flex-col gap-2 lg:max-w-[80%]"
                 >
                     <Image
                         src={item.imageUrl}
-                        height={200}
-                        width={300}
-                        className="w-full h-80 object-cover"
+                        height={300}
+                        width={400}
+                        className="w-[400px] lg:w-full md:w-[450px] h-[350px] md:h-[400px] object-cover"
                         alt={item.name}
                     />
                 </div>
@@ -63,7 +63,8 @@ export default async function Page({ params }: Props) {
                         </span>
                     </div>
                     <div className="flex flex-col gap-4">
-                        <CartItems item={item} />
+                        <AddToCart item={item} />
+
                         <p className="text-sm">{item.words}</p>
                     </div>
                 </section>
