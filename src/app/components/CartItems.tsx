@@ -2,7 +2,6 @@ import useStore from "../store/store";
 import { FirebaseData } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
 
 const CartItems = () => {
     const cartItems = useStore((state: { cartItems: any }) => state.cartItems);
@@ -16,7 +15,7 @@ const CartItems = () => {
         (state: any) => state.removeItemFromCart
     );
     const calculateSubTotal = useStore((state: any) => state.calculateSubTotal);
-    console.log(cartItems);
+
     return (
         <section className="h-full px-4 w-full">
             <h1 className="text-center">CART SUMMARY</h1>
@@ -86,9 +85,7 @@ const CartItems = () => {
                     <p> ${calculateSubTotal().toFixed(2)}</p>
                 </div>
                 <button
-                    onClick={() => {
-                        clearCart();
-                    }}
+                    onClick={clearCart}
                     className="bg-black text-white w-full uppercase py-2"
                 >
                     clear cart

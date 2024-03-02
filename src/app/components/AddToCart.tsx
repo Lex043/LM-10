@@ -3,6 +3,8 @@
 import useStore from "../store/store";
 import { useState } from "react";
 import { FirebaseData } from "@/types";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const AddToCart = ({ item }: any) => {
     const [qty, setQty] = useState(1);
@@ -29,7 +31,13 @@ const AddToCart = ({ item }: any) => {
         };
 
         addItemToCart(tempProduct);
-        console.log(tempProduct);
+        toast.success(`${product.name} item added to cart`, {
+            position: "bottom-right",
+            style: {
+                background: "#000",
+                color: "#FFF",
+            },
+        });
     };
 
     return (
@@ -59,6 +67,7 @@ const AddToCart = ({ item }: any) => {
             >
                 Add To Cart
             </button>
+            <ToastContainer />
         </div>
     );
 };

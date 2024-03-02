@@ -8,7 +8,6 @@ interface Props {
 
 const Cart = ({ setCartOpen }: Props) => {
     const cartItems = useStore((state) => state.cartItems);
-    console.log(cartItems);
     return (
         <section className="w-full">
             <div className="flex flex-col h-screen items-center justify-center">
