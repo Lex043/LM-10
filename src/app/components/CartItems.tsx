@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CartItems = () => {
-    const cartItems = useStore((state: { cartItems: any }) => state.cartItems);
+    const cartItems = useStore((state) => state.cartItems);
     const increaseCartItems = useStore((state: any) => state.increaseCartItems);
     const decreaseCartItems = useStore((state: any) => state.decreaseCartItems);
     const cartItemsLength = useStore(
@@ -15,6 +15,8 @@ const CartItems = () => {
         (state: any) => state.removeItemFromCart
     );
     const calculateSubTotal = useStore((state: any) => state.calculateSubTotal);
+
+    console.log(cartItems);
 
     return (
         <section className="h-full px-4 w-full">
