@@ -83,8 +83,8 @@ const Footer = () => {
                             >
                                 <Image
                                     src={logo.logo}
-                                    height={40}
-                                    width={40}
+                                    height={0}
+                                    width={0}
                                     alt={logo.name}
                                     className="cursor-pointer"
                                 />

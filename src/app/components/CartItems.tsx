@@ -1,7 +1,10 @@
+"use client";
+
 import useStore from "../store/store";
 import { FirebaseData } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect } from "react";
 
 const CartItems = () => {
     const cartItems = useStore((state) => state.cartItems);
@@ -16,20 +19,22 @@ const CartItems = () => {
     );
     const calculateSubTotal = useStore((state: any) => state.calculateSubTotal);
 
-    console.log(cartItems);
+    useEffect(() => {
+        useStore.persist.rehydrate();
+    }, []);
 
     return (
         <section className="h-full px-4 w-full">
             <h1 className="text-center">CART SUMMARY</h1>
-            {cartItems.map((cartItem: FirebaseData, index: number) => (
-                <section key={index} className="pb-4">
+            {cartItems.map((cartItem: FirebaseData) => (
+                <section key={cartItem.id} className="pb-4">
                     <section className="flex items-center gap-4 shadow-lg p-4">
                         <Image
                             src={cartItem.imageUrl}
                             height={112}
                             width={112}
                             alt={cartItem.name}
-                            className="object-cover"
+                            className="object-cover h-28 w-28"
                         />
                         <div className="flex items-center justify-between w-full gap-2">
                             <div className="flex flex-col gap-2">
@@ -50,7 +55,7 @@ const CartItems = () => {
                                 <div className="flex">
                                     <button
                                         onClick={() => {
-                                            decreaseCartItems(cartItem.slug);
+                                            decreaseCartItems(cartItem.id);
                                         }}
                                         className="border-[1px] border-black w-full"
                                     >
@@ -61,7 +66,7 @@ const CartItems = () => {
                                     </span>
                                     <button
                                         onClick={() => {
-                                            increaseCartItems(cartItem.slug);
+                                            increaseCartItems(cartItem.id);
                                         }}
                                         className="border-[1px] border-black w-full"
                                     >
@@ -71,7 +76,7 @@ const CartItems = () => {
                             </div>
                             <p
                                 onClick={() => {
-                                    removeItemFromCart(cartItem.slug);
+                                    removeItemFromCart(cartItem.id);
                                 }}
                                 className="uppercase text-red-700 underline cursor-pointer text-xs"
                             >

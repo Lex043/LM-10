@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Cart from "./Cart";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useMemo } from "react";
 import useStore from "../store/store";
 
 export default function Navbar() {
@@ -17,6 +17,7 @@ export default function Navbar() {
     let shopButtonRef = useRef<HTMLInputElement | null>(null);
 
     useEffect(() => {
+        useStore.persist.rehydrate();
         if (isShopOpen) {
             document.body.classList.add("overflow-y-hidden");
         } else {
