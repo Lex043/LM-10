@@ -5,6 +5,7 @@ import { FirebaseData } from "@/types";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect } from "react";
+import getStipePromise from "@/lib/stripe";
 
 const CartItems = () => {
     const cartItems = useStore((state) => state.cartItems);
@@ -22,6 +23,24 @@ const CartItems = () => {
     useEffect(() => {
         useStore.persist.rehydrate();
     }, []);
+
+    const handleCheckout = async () => {
+        const stripe = await getStipePromise();
+        const response = await fetch("/api/stripe-session", {
+            method: "POST",
+            mode: "cors",
+            headers: { "Content-Type": "application/json" },
+            cache: "no-cache",
+            body: JSON.stringify(cartItems),
+        });
+
+        console.log(response);
+
+        const data = await response.json();
+        if (data.session) {
+            stripe?.redirectToCheckout({ sessionId: data.session.id });
+        }
+    };
 
     return (
         <section className="h-full px-4 w-full">
@@ -104,7 +123,10 @@ const CartItems = () => {
                     >
                         Continue Shopping
                     </Link>
-                    <button className="uppercase w-full border-black border-[1px] py-2 flex-1">
+                    <button
+                        onClick={handleCheckout}
+                        className="uppercase w-full border-black border-[1px] py-2 flex-1"
+                    >
                         checkout
                     </button>
                 </div>
