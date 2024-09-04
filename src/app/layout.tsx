@@ -16,7 +16,7 @@ export default function RootLayout({
         <ReactQueryProvider>
             <html lang="en">
                 <body>
-                    <main className="min-h-screen flex flex-col justify-between">
+                    <main className="flex min-h-screen flex-col justify-between">
                         <Navbar />
                         {children}
                         <Footer />

@@ -31,8 +31,8 @@ const PAYMENT_LOGOS = [
 
 const Footer = () => {
     return (
-        <footer className="border-t-[1px] border-black py-5 px-4 md:px-10 lg:px-14">
-            <section className="mb-6 flex flex-wrap justify-between md:gap-10 md:w-full">
+        <footer className="border-t-[1px] border-black px-4 py-5 md:px-10 lg:px-14">
+            <section className="mx-auto mb-6 flex max-w-screen-2xl flex-wrap justify-between md:w-full md:gap-10">
                 <div className="flex flex-col gap-1">
                     <h3 className="uppercase">Socials</h3>
                     <ul>
@@ -74,7 +74,7 @@ const Footer = () => {
                     </ul>
                 </div>
 
-                <div className="flex items-center gap-3 mt-4">
+                <div className="mt-4 flex items-center gap-3">
                     {PAYMENT_LOGOS.map((logo, name) => {
                         return (
                             <div
@@ -94,10 +94,10 @@ const Footer = () => {
                 </div>
             </section>
 
-            <section className="mt-6 flex flex-col gap-4 place-items-center md:flex-row md:justify-between">
+            <section className="mx-auto mt-6 flex max-w-screen-2xl flex-col place-items-center gap-4 md:flex-row md:justify-between">
                 <h3 className="text-xs">@LM10 | {new Date().getFullYear()}</h3>
 
-                <p className="uppercase text-center text-xs">
+                <p className="text-center text-xs uppercase">
                     <span>
                         Inspired by:{" "}
                         <a

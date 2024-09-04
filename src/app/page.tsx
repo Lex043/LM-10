@@ -9,9 +9,9 @@ import Disclaimer from "./components/Disclaimer";
 
 export default function Home() {
     return (
-        <section className="px-4 md:px-10 lg:px-14 mt-20 lg:mt-32">
-            <header className="text-center flex flex-col gap-6 place-items-center">
-                <h1 className="uppercase text-6xl md:text-9xl lg:text-[10rem] flex flex-col font-extrabold">
+        <section className="mx-auto mt-20 max-w-screen-2xl px-4 md:px-10 lg:mt-32 lg:px-14">
+            <header className="flex flex-col place-items-center gap-6 text-center">
+                <h1 className="flex flex-col text-6xl font-extrabold uppercase md:text-9xl lg:text-[10rem]">
                     <span>Leo</span>
                     <span>Messi</span>
                 </h1>
@@ -20,53 +20,53 @@ export default function Home() {
                     Messi.
                 </p>
                 <Link href="/shop">
-                    <button className="text-white bg-black p-3 w-36">
+                    <button className="w-36 bg-black p-3 text-white">
                         SHOP ALL
                     </button>
                 </Link>
             </header>
 
-            <div className="mt-20 mb-4">
-                <h3 className="text-3xl text-center uppercase mb-4">
+            <div className="mb-4 mt-20">
+                <h3 className="mb-4 text-center text-3xl uppercase">
                     Originals
                 </h3>
                 <Originals />
                 <Link href="/shop">
-                    <button className="uppercase border-[1px] border-black py-1 w-full mt-6">
+                    <button className="mt-6 w-full border-[1px] border-black py-1 uppercase">
                         Shop All
                     </button>
                 </Link>
             </div>
 
-            <div className="mt-24 mb-4">
-                <h3 className="text-3xl text-center mb-4 uppercase">
+            <div className="mb-4 mt-24">
+                <h3 className="mb-4 text-center text-3xl uppercase">
                     Limited Edition
                 </h3>
                 <LimitedEdition />
                 <Link href="/shop">
-                    <button className="uppercase border-[1px] border-black py-1 w-full mt-6">
+                    <button className="mt-6 w-full border-[1px] border-black py-1 uppercase">
                         Shop All
                     </button>
                 </Link>
             </div>
 
-            <div className="mt-24 mb-4">
-                <h3 className="text-3xl text-center mb-4 uppercase">
+            <div className="mb-4 mt-24">
+                <h3 className="mb-4 text-center text-3xl uppercase">
                     Featured
                 </h3>
                 <Featured />
                 <Link href="/shop">
-                    <button className="uppercase border-[1px] border-black py-1 w-full mt-6">
+                    <button className="mt-6 w-full border-[1px] border-black py-1 uppercase">
                         Shop All
                     </button>
                 </Link>
             </div>
 
-            <div className="mt-24 mb-4">
-                <h3 className="text-3xl text-center mb-4 uppercase">Latest</h3>
+            <div className="mb-4 mt-24">
+                <h3 className="mb-4 text-center text-3xl uppercase">Latest</h3>
                 <Latest />
                 <Link href="/shop">
-                    <button className="uppercase border-[1px] border-black py-1 w-full mt-6">
+                    <button className="mt-6 w-full border-[1px] border-black py-1 uppercase">
                         Shop All
                     </button>
                 </Link>

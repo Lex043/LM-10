@@ -1,21 +1,23 @@
 const MailingList = () => {
-  return (
-    <section className="my-16 mx-auto">
-      <div className="border-[1px] border-black p-4 md:p-12">
-        <h1 className="uppercase text-3xl md:text-4xl font-semibold text-center">
-          Join My Mailing List For Discounts And Latest Works
-        </h1>
-        <div className="flex mt-4 max-w-sm mx-auto">
-          <input
-            type="email"
-            placeholder="Your Email"
-            className="border-[1px] border-black py-3 px-2 outline-none w-full"
-          />
-          <button className=" bg-black text-white px-2">Subscribe</button>
-        </div>
-      </div>
-    </section>
-  );
+    return (
+        <section className="mx-auto my-16">
+            <div className="border-[1px] border-black p-4 md:p-12">
+                <h1 className="text-center text-3xl font-semibold uppercase md:text-4xl">
+                    Join My Mailing List For Discounts And Latest Works
+                </h1>
+                <div className="mx-auto mt-4 flex max-w-sm">
+                    <input
+                        type="email"
+                        placeholder="Your Email"
+                        className="w-full border-[1px] border-black px-2 py-3 outline-none"
+                    />
+                    <button className="bg-black px-2 text-white">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default MailingList;

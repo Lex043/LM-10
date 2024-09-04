@@ -43,30 +43,30 @@ const CartItems = () => {
     };
 
     return (
-        <section className="h-full px-4 w-full">
+        <section className="h-full w-full px-4">
             <h1 className="text-center">CART SUMMARY</h1>
             {cartItems.map((cartItem: FirebaseData) => (
                 <section key={cartItem.id} className="pb-4">
-                    <section className="flex items-center gap-4 shadow-lg p-4">
+                    <section className="flex items-center gap-4 p-4 shadow-lg">
                         <Image
                             src={cartItem.imageUrl}
                             height={112}
                             width={112}
                             alt={cartItem.name}
-                            className="object-cover h-28 w-28"
+                            className="h-28 w-28 object-cover"
                         />
-                        <div className="flex items-center justify-between w-full gap-2">
+                        <div className="flex w-full items-center justify-between gap-2">
                             <div className="flex flex-col gap-2">
-                                <h1 className="uppercase text-xs">
+                                <h1 className="text-xs uppercase">
                                     {cartItem.name}
                                 </h1>
                                 <div>
-                                    <p className="uppercase text-xs">
+                                    <p className="text-xs uppercase">
                                         Price: &#36;{cartItem.price} (
                                         {cartItem.quantity})
                                     </p>
                                 </div>
-                                <p className="uppercase text-xs">
+                                <p className="text-xs uppercase">
                                     Sub total: &#36;
                                     {cartItem.price * cartItem.quantity}
                                 </p>
@@ -76,18 +76,18 @@ const CartItems = () => {
                                         onClick={() => {
                                             decreaseCartItems(cartItem.id);
                                         }}
-                                        className="border-[1px] border-black w-full"
+                                        className="w-full border-[1px] border-black"
                                     >
                                         -
                                     </button>
-                                    <span className="border-t-[1px] border-b-[1px] border-black w-full flex items-center justify-center">
+                                    <span className="flex w-full items-center justify-center border-b-[1px] border-t-[1px] border-black">
                                         {cartItem.quantity}
                                     </span>
                                     <button
                                         onClick={() => {
                                             increaseCartItems(cartItem.id);
                                         }}
-                                        className="border-[1px] border-black w-full"
+                                        className="w-full border-[1px] border-black"
                                     >
                                         +
                                     </button>
@@ -97,7 +97,7 @@ const CartItems = () => {
                                 onClick={() => {
                                     removeItemFromCart(cartItem.id);
                                 }}
-                                className="uppercase text-red-700 underline cursor-pointer text-xs"
+                                className="cursor-pointer text-xs uppercase text-red-700 underline"
                             >
                                 Remove
                             </p>
@@ -105,27 +105,27 @@ const CartItems = () => {
                     </section>
                 </section>
             ))}
-            <section className="py-20 w-full flex flex-col gap-4">
+            <section className="flex w-full flex-col gap-4 py-20">
                 <div className="flex justify-between gap-4">
                     <h1>Subtotal Total: {cartItemsLength} Item (s) </h1>
                     <p> ${calculateSubTotal().toFixed(2)}</p>
                 </div>
                 <button
                     onClick={clearCart}
-                    className="bg-black text-white w-full uppercase py-2"
+                    className="w-full bg-black py-2 uppercase text-white"
                 >
                     clear cart
                 </button>
                 <div className="flex items-center gap-2">
                     <Link
                         href="/shop"
-                        className="uppercase w-full text-center text-white bg-black py-2 flex-1 cursor-pointer"
+                        className="w-full flex-1 cursor-pointer bg-black py-2 text-center uppercase text-white"
                     >
                         Continue Shopping
                     </Link>
                     <button
                         onClick={handleCheckout}
-                        className="uppercase w-full border-black border-[1px] py-2 flex-1"
+                        className="w-full flex-1 border-[1px] border-black py-2 uppercase"
                     >
                         checkout
                     </button>

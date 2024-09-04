@@ -20,7 +20,7 @@ const Originals: React.FC = () => {
                             <Link
                                 key={original.id}
                                 href={`/shop/${original.slug}`}
-                                className="border-[1px] border-black p-2 flex flex-col gap-2"
+                                className="flex flex-col gap-2 border-[1px] border-black p-2"
                             >
                                 <ImageComponent data={original} />
                                 <div className="flex justify-between">

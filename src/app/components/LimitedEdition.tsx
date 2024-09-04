@@ -18,7 +18,7 @@ const LimitedEdition: React.FC = () => {
                         <Link
                             key={limited.id}
                             href={`/shop/${limited.slug}`}
-                            className="border-[1px] border-black p-2 flex flex-col gap-2"
+                            className="flex flex-col gap-2 border-[1px] border-black p-2"
                         >
                             <ImageComponent data={limited} />
                             <div className="flex justify-between">

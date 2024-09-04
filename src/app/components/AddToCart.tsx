@@ -41,29 +41,29 @@ const AddToCart = ({ item }: any) => {
     };
 
     return (
-        <div className="flex gap-4 items-center flex-col md:flex-row">
-            <div className="flex w-full h-10">
+        <div className="flex flex-col items-center gap-4 md:flex-row">
+            <div className="flex h-10 w-full">
                 <button
                     onClick={decreaseQty}
-                    className="border-[1px] border-black w-full"
+                    className="w-full border-[1px] border-black"
                 >
                     -
                 </button>
 
-                <span className="border-t-[1px] border-b-[1px] border-black w-full flex items-center justify-center">
+                <span className="flex w-full items-center justify-center border-b-[1px] border-t-[1px] border-black">
                     {qty}
                 </span>
 
                 <button
                     onClick={increaseQty}
-                    className="border-[1px] border-black w-full"
+                    className="w-full border-[1px] border-black"
                 >
                     +
                 </button>
             </div>
             <button
                 onClick={() => addToCart(item)}
-                className="uppercase text-white bg-black w-full py-2 px-2"
+                className="w-full bg-black px-2 py-2 uppercase text-white"
             >
                 Add To Cart
             </button>

@@ -19,7 +19,7 @@ const Featured: React.FC = () => {
                         <Link
                             key={feature.id}
                             href={`/shop/${feature.slug}`}
-                            className="border-[1px] border-black p-2 flex flex-col gap-2"
+                            className="flex flex-col gap-2 border-[1px] border-black p-2"
                         >
                             <ImageComponent data={feature} />
                             <div className="flex justify-between">
